@@ -1,6 +1,6 @@
 # 51200E Spin Up Code
 <div align='center'>
-<img src="DB1E2A6A-9378-467F-BA17-A65EB1F1D746.JPG" alt="Tug Against 46T" title="Tug Pic">
+<img src="TugWith46T.png" alt="Tug Against 46T" title="Tug Pic">
 </div>
 
 ## Overview
