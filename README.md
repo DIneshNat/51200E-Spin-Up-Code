@@ -1,6 +1,5 @@
-<p align="center">
 ## 654X Spin Up Code
-</p>
+  
 <div align='center'>
 <img src="TugWith46T.png" alt="Tug Against 46T" title="Tug Pic">
 </div>
