@@ -19,25 +19,7 @@
 #ifndef _PROS_API_H_
 #define _PROS_API_H_
 
-#ifdef __cplusplus
-#include <cerrno>
-#include <cmath>
-#include <cstdbool>
-#include <cstddef>
-#include <cstdint>
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
-#else /* (not) __cplusplus */
-#include <errno.h>
-#include <math.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#endif /* __cplusplus */
+
 
 #define PROS_VERSION_MAJOR 3
 #define PROS_VERSION_MINOR 6
@@ -62,6 +44,26 @@
 #include "pros/rotation.h"
 #include "pros/screen.h"
 #include "pros/vision.h"
+
+#ifdef __cplusplus
+#include <cerrno>
+#include <cmath>
+#include <cstdbool>
+#include <cstddef>
+#include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#else /* (not) __cplusplus */
+#include <errno.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#endif /* __cplusplus */
 
 #ifdef __cplusplus
 #include "pros/adi.hpp"
