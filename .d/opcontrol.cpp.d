@@ -71,7 +71,7 @@ bin/opcontrol.cpp.o: src/opcontrol.cpp include/main.h include/api.h \
  include/pros/gps.hpp include/pros/gps.h include/pros/imu.hpp \
  include/pros/imu.h include/pros/llemu.hpp include/pros/llemu.h \
  include/pros/misc.hpp include/pros/misc.h include/pros/motors.hpp \
- include/pros/rtos.hpp include/pros/rtos.h include/pros/motors.h \
+ include/pros/motors.h include/pros/rtos.hpp include/pros/rtos.h \
  include/pros/optical.hpp include/pros/optical.h \
  include/pros/rotation.hpp include/pros/rotation.h include/pros/rtos.hpp \
  include/pros/screen.hpp include/pros/screen.h include/pros/vision.hpp \
@@ -215,9 +215,9 @@ include/pros/llemu.h:
 include/pros/misc.hpp:
 include/pros/misc.h:
 include/pros/motors.hpp:
+include/pros/motors.h:
 include/pros/rtos.hpp:
 include/pros/rtos.h:
-include/pros/motors.h:
 include/pros/optical.hpp:
 include/pros/optical.h:
 include/pros/rotation.hpp:
