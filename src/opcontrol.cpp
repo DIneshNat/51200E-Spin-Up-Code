@@ -13,10 +13,15 @@
  * operator control task will be stopped. Re-enabling the robot will restart the
  * task, not resume it from where it left off.
  */
+#define LEFT_WHEELS_PORT 1
+#define RIGHT_WHEELS_PORT 10
 void opcontrol() {
-
-
-
-
-
+    pros::Motor left_wheels (LEFT_WHEELS_PORT);
+    pros::Motor right_wheels (RIGHT_WHEELS_PORT, true); // This reverses the motor
+    pros::Controller master (CONTROLLER_MASTER);
+    while(1){
+        left_wheels.move(master.get_analog(ANALOG_LEFT_Y));
+        right_wheels.move(master.get_analog(ANALOG_RIGHT_Y));
+        pros::delay(10);
+    }
 }
