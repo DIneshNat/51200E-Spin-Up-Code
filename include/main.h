@@ -42,6 +42,9 @@
 //#include "okapi/api.hpp"
 //#include "pros/api_legacy.h"
 
+//Auton selection grafic
+#include "pal/auto.h"
+
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do
  * Motor, you can use the namespace with the following commented out line.
@@ -75,9 +78,12 @@ void opcontrol(void);
 /**
  * You can add C++-only headers here
  */
+ #include "subsytemHeaders/globals.hpp"
+ #include "subsytemHeaders/drive.hpp"
 
- 
+
 //#include <iostream>
+
 #endif
 
 #endif  // _PROS_MAIN_H_

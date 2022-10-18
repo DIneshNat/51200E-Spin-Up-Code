@@ -17,10 +17,13 @@
 }
 
 void initialize() {
-	pros::lcd::initialize();
+	/*pros::lcd::initialize();
 	pros::lcd::set_text(1, "Hello PROS User!");
 	pros::lcd::register_btn1_cb(on_center_button);
-
+	on_center_button();
+	pros::lcd::set_text(3, "Dinesh is cool, Josh is bad tho.");
+	*/
+	printf("Initialize!\n");
 }
 
 /**
