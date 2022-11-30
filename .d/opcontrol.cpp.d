@@ -76,7 +76,6 @@ bin/opcontrol.cpp.o: src/opcontrol.cpp include/main.h include/api.h \
  include/pros/rotation.hpp include/pros/rotation.h include/pros/rtos.hpp \
  include/pros/screen.hpp include/pros/screen.h include/pros/vision.hpp \
  include/pros/vision.h include/pros/link.hpp include/pros/link.h \
- include/pal/auto.h include/subsytemHeaders/globals.hpp \
  include/okapi/api.hpp \
  include/okapi/api/chassis/controller/chassisControllerIntegrated.hpp \
  include/okapi/api/chassis/controller/chassisController.hpp \
@@ -201,7 +200,11 @@ bin/opcontrol.cpp.o: src/opcontrol.cpp include/main.h include/api.h \
  include/okapi/api/units/QPressure.hpp \
  include/okapi/api/units/QTorque.hpp include/okapi/api/units/QVolume.hpp \
  include/okapi/impl/util/configurableTimeUtilFactory.hpp \
- include/okapi/impl/util/rate.hpp include/subsytemHeaders/drive.hpp
+ include/okapi/impl/util/rate.hpp include/pros/api_legacy.h \
+ include/subsytemHeaders/globals.hpp include/pros/adi.hpp \
+ include/pros/imu.hpp include/subsytemHeaders/drive.hpp \
+ include/subsytemHeaders/cata.hpp include/subsytemHeaders/intake.hpp \
+ include/subsytemHeaders/expansion.hpp include/subsytemHeaders/auton.hpp
 include/main.h:
 include/api.h:
 include/pros/adi.h:
@@ -355,8 +358,6 @@ include/pros/vision.hpp:
 include/pros/vision.h:
 include/pros/link.hpp:
 include/pros/link.h:
-include/pal/auto.h:
-include/subsytemHeaders/globals.hpp:
 include/okapi/api.hpp:
 include/okapi/api/chassis/controller/chassisControllerIntegrated.hpp:
 include/okapi/api/chassis/controller/chassisController.hpp:
@@ -492,4 +493,12 @@ include/okapi/api/units/QTorque.hpp:
 include/okapi/api/units/QVolume.hpp:
 include/okapi/impl/util/configurableTimeUtilFactory.hpp:
 include/okapi/impl/util/rate.hpp:
+include/pros/api_legacy.h:
+include/subsytemHeaders/globals.hpp:
+include/pros/adi.hpp:
+include/pros/imu.hpp:
 include/subsytemHeaders/drive.hpp:
+include/subsytemHeaders/cata.hpp:
+include/subsytemHeaders/intake.hpp:
+include/subsytemHeaders/expansion.hpp:
+include/subsytemHeaders/auton.hpp:
