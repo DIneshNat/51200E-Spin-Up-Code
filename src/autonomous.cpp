@@ -32,7 +32,7 @@ void soloAWP(){
     pros::lcd::set_text(4, "Solo AWP Running...");  
 }
 
-int autonVariable = 3;
+int autonVariable = 1;
  void autonSelector(int autonVal){
      autonVariable = autonVal;
      std::string autoString = std::to_string(autonVal);
@@ -89,22 +89,22 @@ void autonomous() {
         driveBot->moveDistance(3_in);
         driveBot->waitUntilSettled();
         moveRoller(350, voltageNum);
-        pros::delay(400);
+        pros::delay(600);
         driveBot->moveDistance(-10_in); 
         driveBot->waitUntilSettled();
-        driveBot->turnAngle(-250_deg);
+        driveBot->turnAngle(200_deg);
         driveBot->waitUntilSettled();
-        cataAutonSet(true);
-        bool xy = false;
-        while(true){
-            pros::lcd::set_text(4, "cata good");
-            xy = cataOff(0);
-            if(xy){
-                break;
-            }
-        }
+        driveBot->moveDistance(15_in);
+        driveBot->waitUntilSettled();
+        cataMotor = 127;
+        delay(3700);
+        cataMotor = 0;
         //shoot
-        driveBot->turnAngle(-110_deg);
+        driveBot->turnAngle(-200_deg);
+        driveBot->waitUntilSettled();
+        driveBot->turnAngle(-200_deg);
+        driveBot->waitUntilSettled();
+        driveBot->turnAngle(-200_deg);
         driveBot->waitUntilSettled();
         //intakeOn
         driveBot->moveDistance(30_in);

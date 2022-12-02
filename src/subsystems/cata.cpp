@@ -18,6 +18,7 @@ bool cataAutons = false;
 
 void cataAutonSet(bool onOff){
     cataAutons = onOff;
+    cataDesired = cataDesiredSet;
 }
 
 
@@ -36,7 +37,6 @@ int cataState(){
 }
 
 bool cataLocation(int cataCount){
-    pros::lcd::set_text(4, "cata good");
     cataCurrentLoc = cataMotor.get_position();
     if(cataState() == 1){
         cataCont = true;
@@ -49,12 +49,13 @@ bool cataLocation(int cataCount){
         }
     } 
     else{
+        pros::lcd::set_text(5, "cata okay");
         cataMotor = 0;
         cataAutons = false;
         cataTrue = false;
         cataCont = false;
         cataSet++;
-        cataDesired = cataDesired + (cataSet*2);
+        cataDesired = cataDesired +50;
         cataDesired = cataDesired + cataDesiredSet;
     }    
     return false;
@@ -69,7 +70,6 @@ bool cataMove(){
 }
 
 bool cataOff(int cataCount){
-    pros::lcd::set_text(4, "cata good");
     bool cataMove = cataLocation(cataCount);
     return cataMove;
 }
