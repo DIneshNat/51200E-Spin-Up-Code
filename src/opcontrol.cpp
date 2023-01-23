@@ -1,5 +1,6 @@
 #include "main.h"
 #include "pros/adi.hpp"
+#include "pros/misc.h"
 #include "pros/rtos.hpp"
 pros::ADIDigitalOut expansionMec('A', false);
 
@@ -26,11 +27,16 @@ void opcontrol() {
         intakeOn();
 
         //cata code 
-        bool cataMove = cataOff(cataCount);
-        cataOns();
+        //bool cataMove = cataOff(cataCount);
+        //cataOns();
+        cataRun();
 
         //expansion code
         expansionState();
+
+        if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)==1 && controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)==1){
+            expansionMec.set_value(true);
+        }
 
         pros::delay(10);
     }

@@ -10,11 +10,12 @@ int cataOn = 0;
 int cataStop = 100;
 int cataCurrentLoc = 0;
 int cataDesired = 0;
-int cataDesiredSet = 12470;
+int cataDesiredSet = 12300;
 int cataSet = 1;
 bool cataTrue = false;
 bool cataCont = false;
 bool cataAutons = false;
+int cataMom = 15;
 
 void cataAutonSet(bool onOff){
     cataAutons = onOff;
@@ -55,7 +56,8 @@ bool cataLocation(int cataCount){
         cataTrue = false;
         cataCont = false;
         cataSet++;
-        cataDesired = cataDesired +50;
+        cataMom ++;
+        cataDesiredSet += cataMom;
         cataDesired = cataDesired + cataDesiredSet;
     }    
     return false;
@@ -90,5 +92,14 @@ void cataOns(){
     }
     else if(!cataTrue){
         cataMotor = 0;
+    }
+}
+
+void cataRun(){
+    if(limitSwitch.get_value()&&controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1) != 1){
+        cataMotor = 0;
+        pros::lcd::set_text(4, "limit press");
+    }else{
+        cataMotor = 127;
     }
 }

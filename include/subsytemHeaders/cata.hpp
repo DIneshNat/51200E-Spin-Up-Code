@@ -14,4 +14,6 @@ bool cataButt();
 
 void cataOns();
 
+void cataRun();
+
 

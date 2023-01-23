@@ -16,3 +16,5 @@ extern pros::Motor intakeMotor;
 extern pros::Controller controller;
 
 extern pros::IMU gyro;
+
+extern pros::ADIButton limitSwitch;

@@ -38,7 +38,7 @@ void moveRoller(int units, int voltage){
     resetIntakeEncoder();
 
     //drive forward until units reached
-    while(intakeMotor.get_position()< abs(units)){
+    while(abs(intakeMotor.get_position())< abs(units)){
         intakeMotor = 127*direction;
         pros::delay(10);
     }
