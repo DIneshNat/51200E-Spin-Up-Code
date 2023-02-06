@@ -7,7 +7,7 @@
 
 pros::IMU gyro(1);
 
-int forward;
+int forwards;
 int turning;
 int left_side;
 int right_side;
@@ -44,11 +44,11 @@ void setDriveMotors(){
     pros::lcd::clear_line(4);
     pros::lcd::clear_line(5);
     
-    forward = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+    forwards = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
     turning = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
 
-    left_side = forward + turning;
-    right_side = forward - turning;
+    left_side = forwards + turning;
+    right_side = forwards - turning;
 
     left_side_volts = left_side;
     right_side_volts = right_side;
