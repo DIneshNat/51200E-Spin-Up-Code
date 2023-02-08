@@ -201,6 +201,10 @@ bin/subsystems/expansion.cpp.o: src/subsystems/expansion.cpp \
  include/okapi/api/units/QTorque.hpp include/okapi/api/units/QVolume.hpp \
  include/okapi/impl/util/configurableTimeUtilFactory.hpp \
  include/okapi/impl/util/rate.hpp include/pros/api_legacy.h \
+ include/EZ-Template/api.hpp include/EZ-Template/PID.hpp \
+ include/EZ-Template/util.hpp include/EZ-Template/auton.hpp \
+ include/EZ-Template/auton_selector.hpp \
+ include/EZ-Template/drive/drive.hpp include/EZ-Template/sdcard.hpp \
  include/subsytemHeaders/globals.hpp include/pros/adi.hpp \
  include/pros/imu.hpp include/subsytemHeaders/drive.hpp \
  include/subsytemHeaders/cata.hpp include/subsytemHeaders/intake.hpp \
@@ -495,6 +499,13 @@ include/okapi/api/units/QVolume.hpp:
 include/okapi/impl/util/configurableTimeUtilFactory.hpp:
 include/okapi/impl/util/rate.hpp:
 include/pros/api_legacy.h:
+include/EZ-Template/api.hpp:
+include/EZ-Template/PID.hpp:
+include/EZ-Template/util.hpp:
+include/EZ-Template/auton.hpp:
+include/EZ-Template/auton_selector.hpp:
+include/EZ-Template/drive/drive.hpp:
+include/EZ-Template/sdcard.hpp:
 include/subsytemHeaders/globals.hpp:
 include/pros/adi.hpp:
 include/pros/imu.hpp:
